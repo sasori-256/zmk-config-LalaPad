@@ -34,7 +34,8 @@
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_xy_scaler 3 2>,
-            <&zip_temp_layer 9 500>; /* MOUSE_LQ */
+            <&zip_temp_layer 9 500>;
+ /* MOUSE_LQ */
     };
 
     lowspeedmode {
@@ -68,7 +69,8 @@
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_xy_scaler 3 2>,
-            <&zip_temp_layer 9 500>; /* MOUSE_LQ */
+            <&zip_temp_layer 9 500>;
+ /* MOUSE_LQ */
     };
 
     lowspeedmode {
@@ -213,7 +215,7 @@
 &kp TAB    &mt2 GRAVE SQT  &mt2 LBKT COMMA  &mt2 RBKT PERIOD  &mt2 EQUAL MINUS  &mt2 COLON SEMICOLON  &kp L          &kp R          &kp D            &kp Y       &kp P      &to 8
 &kp LCTRL  &kp A           &kp O            &kp E             &kp I             &kp U                 &kp G          &kp N          &kp T            &kp S       &kp K      &kp F
 &kp LSHFT  &kp Z           &kp X            &kp C             &kp V             &kp W                 &kp J          &kp H          &kp M            &kp B       &kp Q      &mt2 BSLH SLASH
-&kp ESC    &kp LEFT_WIN    &kp LEFT_ALT     &kp SPACE         &mo 1             &lt 2 LANG2           &lt 3 LANG1    &kp BACKSPACE  &kp RET          &mkp LCLK   &mkp MCLK  &mkp RCLK
+&kp ESC    &kp LEFT_WIN    &kp LEFT_ALT     &kp SPACE         &mo 1             &lt 2 LANG1           &lt 3 LANG2    &kp BACKSPACE  &kp RET          &mkp LCLK   &mkp MCLK  &mkp RCLK
                            &allow_end       &allow_pagedown   &allow_home       &allow_pageup         &allow_pageup  &allow_home    &allow_pagedown  &allow_end
             >;
         };
@@ -306,11 +308,11 @@
         QWERTY_LAYER {
             display-name = "Another Default";
             bindings = <
-&kp TAB    &kp Q         &kp W         &kp E            &kp R        &kp T          &kp Y          &kp U          &kp I             &kp O                  &kp P           &to 0
-&kp LCTRL  &kp A         &kp S         &kp D            &kp F        &kp G          &kp H          &kp J          &kp K             &kp L                  &mt2 SEMI LBKT  &mt2 SQT RBKT
-&kp LSHFT  &kp Z         &kp X         &kp C            &kp V        &kp B          &kp N          &kp M          &mt2 SLASH COMMA  &mt2 BACKSLASH PERIOD  &kp UP          &mt2 BSLH SLASH
-&kp ESC    &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE        &mo 1        &lt 2 LANG2    &lt 3 LANG1    &kp BACKSPACE  &kp RET           &kp LEFT               &kp DOWN        &kp RIGHT
-                         &allow_end    &allow_pagedown  &allow_home  &allow_pageup  &allow_pageup  &allow_home    &allow_pagedown   &allow_end
+&kp TAB    &kp Q         &kp W         &kp E            &kp R        &kp T             &kp Y          &kp U          &kp I             &kp O                  &kp P           &to 0
+&kp LCTRL  &kp A         &kp S         &kp D            &kp F        &kp G             &kp H          &kp J          &kp K             &kp L                  &mt2 SEMI LBKT  &mt2 SQT RBKT
+&kp LSHFT  &kp Z         &kp X         &kp C            &kp V        &kp B             &kp N          &kp M          &mt2 SLASH COMMA  &mt2 BACKSLASH PERIOD  &kp UP          &mt2 BSLH SLASH
+&kp ESC    &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE        &mo 1        &lt 2 LANGUAGE_1  &lt 3 LANG2    &kp BACKSPACE  &kp RET           &kp LEFT               &kp DOWN        &kp RIGHT
+                         &allow_end    &allow_pagedown  &allow_home  &allow_pageup     &allow_pageup  &allow_home    &allow_pagedown   &allow_end
             >;
 
             sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
