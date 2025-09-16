@@ -188,11 +188,11 @@
             sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
 
             bindings = <
-&kp TAB    &mt2 GRAVE SQT  &mt2 LBKT COMMA  &mt RBKT PERIOD  &mt2 EQUAL MINUS  &mt2 COLON SEMICOLON  &kp L          &kp R          &kp D            &kp Y       &kp P      &to 6
-&kp LCTRL  &kp A           &kp O            &kp E            &kp I             &kp U                 &kp G          &kp N          &kp T            &kp S       &kp K      &kp F
-&kp LSHFT  &kp Z           &kp X            &kp C            &kp V             &kp W                 &kp J          &kp H          &kp M            &kp B       &kp Q      &mt2 BSLH SLASH
-&kp ESC    &kp LEFT_WIN    &kp LEFT_ALT     &kp SPACE        &mo 1             &lt 2 LANG2           &lt 3 LANG1    &kp BACKSPACE  &kp RET          &mkp LCLK   &mkp MCLK  &mkp RCLK
-                           &allow_end       &allow_pagedown  &allow_home       &allow_pageup         &allow_pageup  &allow_home    &allow_pagedown  &allow_end
+&kp TAB    &mt2 GRAVE SQT  &mt2 LBKT COMMA  &mt2 RBKT PERIOD  &mt2 EQUAL MINUS  &mt2 COLON SEMICOLON  &kp L          &kp R          &kp D            &kp Y       &kp P      &to 8
+&kp LCTRL  &kp A           &kp O            &kp E             &kp I             &kp U                 &kp G          &kp N          &kp T            &kp S       &kp K      &kp F
+&kp LSHFT  &kp Z           &kp X            &kp C             &kp V             &kp W                 &kp J          &kp H          &kp M            &kp B       &kp Q      &mt2 BSLH SLASH
+&kp ESC    &kp LEFT_WIN    &kp LEFT_ALT     &kp SPACE         &mo 1             &lt 2 LANG2           &lt 3 LANG1    &kp BACKSPACE  &kp RET          &mkp LCLK   &mkp MCLK  &mkp RCLK
+                           &allow_end       &allow_pagedown   &allow_home       &allow_pageup         &allow_pageup  &allow_home    &allow_pagedown  &allow_end
             >;
         };
 
@@ -237,11 +237,33 @@
             >;
         };
 
+        MOUSE_R_LAYER {
+            display-name = "mouse_r_layer";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mo 5
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4   &mkp MB5   &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans
+            >;
+        };
+
+        SCROLL_R_LAYER {
+            display-name = "scroll_r_layer";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
         MOUSE_L_LAYER {
             display-name = "mouse_l_layer";
             bindings = <
 &trans  &none      &none      &none      &none   &none   &kp L   &kp R   &kp D   &kp Y      &kp P      &none
-&trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &mo 5   &none   &kp G   &kp N   &kp T   &kp S      &kp K      &kp F
+&trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &mo 7   &none   &kp G   &kp N   &kp T   &kp S      &kp K      &kp F
 &trans  &none      &mkp MB5   &mkp MB4   &none   &none   &kp J   &kp H   &kp M   &kp B      &kp Q      &mt2 BACKSLASH SLASH
 &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK
                    &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
@@ -272,19 +294,19 @@
             sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
         };
 
-        MOUSE_R_LAYER {
-            display-name = "mouse_r_layer";
+        MOUSE_LQ {
+            display-name = "mouse_l_layer";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mo 8
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4   &mkp MB5   &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &none      &none      &none      &none   &none   &kp L   &kp R   &kp D   &kp Y      &kp P      &none
+&trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &mo 7   &none   &kp G   &kp N   &kp T   &kp S      &kp K      &kp F
+&trans  &none      &mkp MB5   &mkp MB4   &none   &none   &kp J   &kp H   &kp M   &kp B      &kp Q      &mt2 BACKSLASH SLASH
+&trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK
+                   &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        SCROLL_R_LAYER {
-            display-name = "scroll_r_layer";
+        SCROLL_LQ {
+            display-name = "scroll_l_layer";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
