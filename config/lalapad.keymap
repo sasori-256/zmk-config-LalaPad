@@ -21,10 +21,21 @@
 // cirque trackpad input&layer control
 
 &glidepoint_listener_R {
-    input-processors =
-        <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_xy_scaler 3 2>,
-        <&zip_temp_layer MOUSE_R_LAYER 500>;
+    tomisuke_mode_r {
+        layers = <DEFAULT_LAYER>;
+        input-processors =
+            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_scaler 3 2>,
+            <&zip_temp_layer MOUSE_R_LAYER 500>;
+    };
+
+    qwerty_mode_r {
+        layers = <8>; /* QWERTY_LAYER */
+        input-processors =
+            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_scaler 3 2>,
+            <&zip_temp_layer 9 500>; /* MOUSE_LQ */
+    };
 
     lowspeedmode {
         layers = <SECONDARY_LAYER>;
@@ -44,10 +55,21 @@
 };
 
 &glidepoint_listener_L {
-    input-processors =
-        <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_xy_scaler 3 2>,
-        <&zip_temp_layer MOUSE_L_LAYER 500>;
+    tomisuke_mode_l {
+        layers = <DEFAULT_LAYER>;
+        input-processors =
+            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_scaler 3 2>,
+            <&zip_temp_layer MOUSE_L_LAYER 500>;
+    };
+
+    qwerty_mode_l {
+        layers = <8>; /* QWERTY_LAYER */
+        input-processors =
+            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_scaler 3 2>,
+            <&zip_temp_layer 9 500>; /* MOUSE_LQ */
+    };
 
     lowspeedmode {
         layers = <SECONDARY_LAYER>;
