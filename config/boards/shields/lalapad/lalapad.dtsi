@@ -104,7 +104,12 @@
         compatible = "cirque,pinnacle";
         status = "okay";
         reg = <1>;
-        spi-max-frequency = <1000000>;
+        /* TEST (test/spi-clock-down): 1MHz -> 250kHz. The trackpad shares this
+         * SPI bus with the 595 that drives the matrix columns. If a marginal
+         * solder joint on a shared SPI line (SCK/MOSI/CS/DR) corrupts a transfer
+         * only under concurrent trackpad+same-side-key load, a slower clock has
+         * lower signal-integrity demands and should reduce/eliminate the crash. */
+        spi-max-frequency = <250000>;
         dr-gpios = <&xiao_d 7 (GPIO_ACTIVE_HIGH)>;
 
         sensitivity = "2x";
